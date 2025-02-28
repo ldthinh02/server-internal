@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  server-internal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3004:3000"
+    image: server-internal
+    restart: unless-stopped
